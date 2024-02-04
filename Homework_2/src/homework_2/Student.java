@@ -2,14 +2,12 @@ package homework_2;
 
 public class Student {
 		
-	private int id;
-	private String name;
-	private double grade;
+	private int id= -1;
+	private String name="";
+	private double grade = -1;
 	
 	public Student() {
-		this.id = 0;
-		this.name = "";
-		this.grade = 0;
+		
 	}
 	public Student(int id, String name, double grade) {
 		this.id = id;
