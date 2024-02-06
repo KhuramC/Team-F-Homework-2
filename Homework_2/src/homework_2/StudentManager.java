@@ -7,11 +7,6 @@ public class StudentManager {
 	
 	private Student students[];
 	
-	public static void main(String[] args) {
-		StudentManager sd = new StudentManager();
-		sd.students[0] = new Student();
-		
-	}
 	//Method must have this prototype from the doc
 	public boolean readFromFile(String fileName) {
 		try{
