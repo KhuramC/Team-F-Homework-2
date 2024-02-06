@@ -7,6 +7,7 @@ public class StudentManager {
 	
 	private Student students[];
 	
+
 	//Method must have this prototype from the doc
 	public boolean readFromFile(String fileName) {
 		try{
