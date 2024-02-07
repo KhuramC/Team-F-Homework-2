@@ -62,31 +62,22 @@ public class StudentManager {
 	}
 	//Method must have this prototype from the doc
 	public boolean searchStudentById(int id) {
-			return true;
+		for(Student student : students) {
+			if(student.getId() == id) {
+				System.out.println("The student with the ID: " + student.getId() + " found! " );
+				System.out.println("Name: " + student.getName());
+				System.out.println("Grade: " + student.getGrade());
+				
+				return true;
+				}
+		}
+		System.out.println("Student with ID " + id + "not found.");
+		return false;
 	}
 	
 	//Method must have this prototype from the doc
 	public boolean updateStudentGradeById(int id, double grade) {
-		// Go through student collection using for loop.
-		for (Student student : students) {
-		    // Check to see if student is null and has ID
-		    if (student != null && student.getId() == id) {
-		        // If true, use setGrade.
-		        student.setGrade(grade);
-		        
-		        // Print message indicating it was a success.
-		        System.out.println("Found Student ID: " + id + ". Grade update success.");
-		        
-		        // As mentioned in the assignment, return true if success.
-		        return true;
-		    }
-		}
-
-		// Print a message indicating it was failed.
-		System.out.println("Could not find Student ID: " + id + ". Grade update failed.");
-
-		// As mentioned in the assignment, return false if failed.
-		return false;
+		return true;
 		
 	}
 	
