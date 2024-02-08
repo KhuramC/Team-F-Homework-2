@@ -5,7 +5,7 @@ import java.util.*;
 
 public class StudentManager {
 	
-	private Student students[] = new Student[0];
+	private Student students[];
 	
 
 	//Method must have this prototype from the doc
@@ -77,26 +77,29 @@ public class StudentManager {
 	
 	//Method must have this prototype from the doc
 	public boolean updateStudentGradeById(int id, double grade) {
-		// Go through student collection using for loop.
-		for (Student student : students) {
-		    // Check to see if student is null and has ID
-		    if (student != null && student.getId() == id) {
-		        // If true, use setGrade.
-		        student.setGrade(grade);
-
-		        // Print message indicating it was a success.
-		        System.out.println("Found Student ID: " + id + ". Grade update success.");
-
-		        // As mentioned in the assignment, return true if success.
-		        return true;
-		    }
-		}
-
-		// Print a message indicating it was failed.
-		System.out.println("Could not find Student ID: " + id + ". Grade update failed.");
-
-		// As mentioned in the assignment, return false if failed.
-		return false;
-	}
+		// per assignment, using 'searchStudentById' method
+		if (searchStudentById(id)) {
+	        // use loop to go through student
+	        for (Student student : students) {
+	        	if (student.getId() == id) {
+	            
+	            	System.out.println("Student ID " + student.getId() + "'s grade has been updated");
+	                System.out.println("Previous Grade: " + student.getGrade());
+	                
+	                // Use setGrade
+	                student.setGrade(grade);
+	             
+	                System.out.println("New Grade: " + student.getGrade());
+	                
+	                return true;
+	            }
+	        }
+		} 
+	    else {
+	        // Extra print stating grade hasn't been updated if not found.
+	        System.out.println("Grade not updated.");
+	    }
+	    	return false;
+	}	
 	
 }
