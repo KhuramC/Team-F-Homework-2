@@ -5,7 +5,7 @@ import java.util.*;
 
 public class StudentManager {
 	
-	private Student students[];
+	private Student students[] = new Student[0];
 	
 
 	//Method must have this prototype from the doc
