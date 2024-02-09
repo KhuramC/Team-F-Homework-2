@@ -71,7 +71,7 @@ public class StudentManager {
 				return true;
 				}
 		}
-		System.out.println("Student with ID " + id + "not found.");
+		System.out.println("Student with ID " + id + " not found.");
 		return false;
 	}
 	
